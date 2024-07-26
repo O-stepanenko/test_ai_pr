@@ -1,0 +1,7 @@
+[
+  { "id": 1, "title": "Cozy Studio", "price": 1200, "city": "New York" },
+  { "id": 2, "title": "Modern Apartment", "price": 2500, "city": "San Francisco" },
+  { "id": 3, "title": "Spacious Loft", "price": 1800, "city": "Chicago" },
+  { "id": 4, "title": "Luxury Penthouse", "price": 5000, "city": "Los Angeles" },
+  { "id": 5, "title": "Quiet Suburban Home", "price": 1500, "city": "Dallas" }
+]
