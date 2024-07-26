@@ -1,32 +1,19 @@
-name: Node.js CI
+name: Auto-PR-Body Generator
 
 on:
-  push:
-    branches:
-      - main
   pull_request:
-    branches:
-      - main
+
+permissions:
+  contents: read
+  repository-projects: write
+  pull-requests: write
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
+      - uses: actions/checkout@v2
+      - name: AI powerd Automatic PR Body Generation
+        uses: jbrocher/auto-pr-body-generator@v0.2.2
         with:
-          node-version: '16'
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Run build (optional)
-        run: npm run build
-
-      - name: Start the application (optional)
-        run: npm start
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
